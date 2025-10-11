@@ -18,7 +18,7 @@ class Solution:
                 return c_p
             common_prefix = c_p
 
-        for i in range(len(strs)):
+        for i in range(1, len(strs)):
             if strs[i] == '':
                 return ''
                 break
