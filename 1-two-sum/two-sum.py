@@ -1,11 +1,21 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        resultlist =[]
+class Solution(object):
+    def twoSum(self, nums, target):
+        d = {}
+        res = []
+        complement = 0
         for i in range(len(nums)):
-            for j in range(len(nums)):
-                if i != j:
-                    if nums[i] + nums[j] == target:
-                        resultlist.append(i)
-                        resultlist.append(j)
-                        return resultlist
-                        break
+            complement = target - nums[i]
+            if complement in d:
+                res.append(d[complement])
+                res.append(i)
+                return res
+            else:
+                d[nums[i]] = i
+        """
+    
+
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
