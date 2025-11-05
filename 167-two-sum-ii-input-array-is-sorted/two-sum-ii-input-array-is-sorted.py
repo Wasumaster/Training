@@ -6,8 +6,7 @@ class Solution:
             current_sum = numbers[pointer_front] + numbers[pointer_back]
             if current_sum == target:
                 return [pointer_front + 1, pointer_back + 1]
-            else: 
-                if current_sum > target:
-                    pointer_back -= 1
-                else:
-                    pointer_front += 1
+            elif current_sum > target:
+                pointer_back -= 1
+            else:
+                pointer_front += 1
