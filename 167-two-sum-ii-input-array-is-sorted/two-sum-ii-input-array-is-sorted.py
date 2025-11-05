@@ -3,11 +3,11 @@ class Solution:
         pointer_front = 0
         pointer_back = len(numbers) - 1
         while pointer_front < pointer_back:
-            if numbers[pointer_front] + numbers[pointer_back] == target:
+            current_sum = numbers[pointer_front] + numbers[pointer_back]
+            if current_sum == target:
                 return [pointer_front + 1, pointer_back + 1]
-                break
             else: 
-                if numbers[pointer_front] + numbers[pointer_back] > target:
+                if current_sum > target:
                     pointer_back -= 1
                 else:
                     pointer_front += 1
