@@ -2,8 +2,7 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         dic_s = {}
         dic_t = {}
-        if len(s) != len(t):
-            return False
+
         for i in range(len(s)):
             c1 = s[i]
             c2 = t[i]
