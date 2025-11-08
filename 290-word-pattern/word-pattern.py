@@ -10,10 +10,11 @@ class Solution:
             if char in char_to_slowa:
                 if char_to_slowa[char] != word:
                     return False
-            else:
-                if word in slowa_to_char:
-                    if slowa_to_char[word] != char:
-                        return False
-            char_to_slowa[char] = word
+            if word in slowa_to_char:
+                if slowa_to_char[word] != char:
+                    return False 
+            
             slowa_to_char[word] = char
-        return True
+            char_to_slowa[char] = word
+
+        return True                 
