@@ -1,16 +1,18 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        d = {}
-        res = []
-        complement = 0
+        output = []
+        arr = []
+        cal = 0
         for i in range(len(nums)):
-            complement = target - nums[i]
-            if complement in d:
-                res.append(d[complement])
-                res.append(i)
-                return res
-            else:
-                d[nums[i]] = i
+            if nums[i] in arr:
+                output.append(i)
+                output.append(arr.index(nums[i]))
+                break
+
+            cal = target - nums[i]
+            arr.append(cal)
+              
+        return output
         """
     
 
