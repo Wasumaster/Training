@@ -11,10 +11,4 @@ class Solution:
             else:
                 stack.append(element)
 
-        output = '/'
-        len_stack = len(stack)
-        for i in range(len_stack):
-            output += stack[i]
-            if i != len_stack - 1:
-                output += "/"
-        return output
+        return "/" + "/".join(stack)
