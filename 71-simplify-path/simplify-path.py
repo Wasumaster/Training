@@ -5,7 +5,7 @@ class Solution:
         for element in pathTable:
             if element == "." or element == '':
                 continue
-            if element == '..':
+            elif element == '..':
                 if stack:
                     stack.pop()
             else:
