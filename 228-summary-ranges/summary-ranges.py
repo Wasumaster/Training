@@ -6,7 +6,7 @@ class Solution:
         len_nums = len(nums)
         if len_nums == 0:
             return output
-        while pointer1 < len_nums or pointer2 <0:
+        while pointer1 < len_nums:
             pointer2 = pointer1 + 1
             iterator = 1
             while pointer2 < len_nums and pointer1 - 1 < len_nums and nums[pointer1] + iterator == nums[pointer2]:
