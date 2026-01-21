@@ -9,16 +9,10 @@ class Solution:
         'D' :500,
         'M' :1000
         }
-        p = 0
-        while p < len(s):
-            if p + 1 < len(s):
-                if d[s[p + 1]] > d[s[p]]:
-                    res +=  d[s[p + 1]] - d[s[p]]
-                    p += 2
-                else:
-                    res +=  d[s[p]]
-                    p += 1
+        for i in range(len(s)):
+            if i + 1 < len(s) and d[s[i + 1]] > d[s[i]]:
+                res -= d[s[i]]
+                i += 1
             else:
-                res +=  d[s[p]]
-                p += 1
-        return res
+                res += d[s[i]]
+        return res 
