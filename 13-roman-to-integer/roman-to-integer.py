@@ -12,7 +12,6 @@ class Solution:
         for i in range(len(s)):
             if i + 1 < len(s) and d[s[i + 1]] > d[s[i]]:
                 res -= d[s[i]]
-                i += 1
             else:
                 res += d[s[i]]
         return res 
