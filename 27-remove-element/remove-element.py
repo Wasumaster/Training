@@ -6,7 +6,7 @@ class Solution:
             if nums[i] != val:
                 nums[k] = nums[i]
                 k += 1
-                count += 1 
+                count += 1
             else:
-                nums[i] = "_"
+                continue
         return count
