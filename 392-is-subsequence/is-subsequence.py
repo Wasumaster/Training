@@ -1,21 +1,15 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        pointer_t = 0
+        dlugosc_s = len(s)
         pointer_s = 0
-        suma = 0
-        dl_s = len(s)
-        dl = len(t)
-        if dl_s == 0 and dl > 0:
+        if dlugosc_s == 0:
             return True
-
-        while pointer_t < dl and pointer_s < dl_s:
-            if s[pointer_s] == t[pointer_t]:
+        for i in range(len(t)):
+            if  s[pointer_s] == t[i]:
                 pointer_s += 1
-                pointer_t += 1
-                suma += 1
-            else: 
-                pointer_t += 1
-        if suma == dl_s:
-            return True
-        else:
-            return False
+ 
+                if pointer_s == dlugosc_s:
+                    return True
+        return False
+
+                        
