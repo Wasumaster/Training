@@ -6,9 +6,11 @@ class Solution:
             if element == "." or element == '':
                 continue
             elif element == '..':
-                if stack:
+                if stack: 
                     stack.pop()
             else:
                 stack.append(element)
+        return '/'+ '/'.join(stack)
 
-        return "/" + "/".join(stack)
+
+        
