@@ -2,13 +2,16 @@ class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
         closeToOpen = { ')':'(',']':'[','}':'{'}
-
-        for c in s:
-            if c in closeToOpen:
-                if stack and stack[-1] == closeToOpen[c]:
+        
+        for i in range(len(s)):
+            if s[i] in closeToOpen:
+                if stack and stack[-1] == closeToOpen[s[i]]:
                     stack.pop()
                 else:
                     return False
             else:
-                stack.append(c)
-        return not stack
+                stack.append(s[i])
+        if len(stack) != 0:
+            return False
+        else:
+            return True
