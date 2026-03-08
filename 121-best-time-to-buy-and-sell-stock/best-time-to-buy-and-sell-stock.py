@@ -4,6 +4,6 @@ class Solution:
         max_profit =  0
         for price in prices:
             min_price = min(price, min_price)
-            profit = price  - min_price
-            max_profit = max(profit, max_profit)
-        return max_profit
+            max_profit = max(max_profit, price - min_price)
+
+        return max_profit 
