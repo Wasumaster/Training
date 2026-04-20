@@ -11,10 +11,5 @@ class Solution(object):
                 return res
             else:
                 d[nums[i]] = i
-
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
         
+        return False
