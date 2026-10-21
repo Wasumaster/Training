@@ -6,7 +6,7 @@ class Solution(object):
             if number in d:
                 d[number] += 1
             else:
-                d[number] = 0
+                d[number] = 1
         major_element = max(d.values())
 
         for key in d:
