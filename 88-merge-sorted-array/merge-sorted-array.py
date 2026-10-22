@@ -19,9 +19,3 @@ class Solution:
             nums1[last] = nums2[n]
             n -= 1
             last -= 1
-
-
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
-        
