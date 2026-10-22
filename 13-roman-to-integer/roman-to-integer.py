@@ -10,8 +10,8 @@ class Solution:
         'M' :1000
         }
         for i in range(len(s)):
-            if i + 1 < len(s) and d[s[i + 1]] > d[s[i]]:
-                res -= d[s[i]]
+            if i + 1 < len(s) and d[s[i]] < d[s[i + 1]]:
+                res -= d[s[i]] 
             else:
-                res += d[s[i]]
-        return res 
+                res += d[s[i]] 
+        return res
