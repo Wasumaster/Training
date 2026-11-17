@@ -4,12 +4,8 @@ class Solution(object):
        suplement = 0
        for i in range(len(nums)):
         suplement = target - nums[i]
-
         if suplement in slownik:
-            arr = []
-            arr.append(i)
-            arr.append(slownik[suplement])
-            return arr
+            return [i, slownik[suplement]]
         else:
             slownik[nums[i]] = i            
 
