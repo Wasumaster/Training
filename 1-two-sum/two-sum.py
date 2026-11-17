@@ -1,16 +1,22 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        d = {}
-        res = []
-        complement = 0
-        for i in range(len(nums)):
-            complement = target - nums[i]
-            if complement in d:
-                res.append(i)
-                res.append(d[complement])
-                return res
-            else:
-                d[nums[i]] = i
+       slownik = {}
+       suplement = 0
+       for i in range(len(nums)):
+        suplement = target - nums[i]
 
+        if suplement in slownik:
+            arr = []
+            arr.append(i)
+            arr.append(slownik[suplement])
+            return arr
+        else:
+            slownik[nums[i]] = i            
 
-        return False
+       
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
