@@ -2,15 +2,16 @@ class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
         closed_to_open = {"]": "[", "}":"{", ")":"("}
-        for bracekt in s:
-            if bracekt == '(' or bracekt == "{" or bracekt == "[":
-                stack.append(bracekt)
-            else:
-                if stack and stack[-1] == closed_to_open[bracekt]:
+        for paranthesis in s:
+
+            if len(stack) > 0 and paranthesis in closed_to_open:
+                if stack[-1] == closed_to_open[paranthesis]:
                     stack.pop()
                 else:
                     return False
-        if len(stack) == 0:
-            return True
-        else:
+            else:
+                stack.append(paranthesis)
+        if len(stack) > 0:
             return False
+        else:
+            return True
